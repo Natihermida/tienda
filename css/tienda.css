@@ -1,27 +1,182 @@
-*{
-    border: 1px solid black;
+/* Reseteo de márgenes y bordes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-header{
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* Cabecera */
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-header i{
-    font-size: 30px;
-   
+
+header i {
+    font-size: 24px;
 }
-.container{
-    width: 80%;
-    margin: 0 auto;
+
+header h1 {
+    font-size: 28px;
+    margin-left: 10px;
 }
-main{
+
+/* Listado de proveedores */
+.listado {
+    margin-bottom: 30px;
+}
+
+h1, h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+}
+
+table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #e2e2e2;
+}
+
+/* Formulario */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: #0056b3;
+}
+
+/* Contacto */
+.contacto {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 20px;
 }
-main aside{
-    width: 30%;
+
+.contacto h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: #333;
 }
-main section{
-    width: 70%;
+
+/* Estilo de botones dentro de las acciones */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+a:hover {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+}
+aside ul {
+    list-style: none;
     
+
 }
+
+/* Respuestas y pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    table, form {
+        width: 100%;
+    }
+    
+    .listado table th,
+    .listado table td {
+        font-size: 14px;
+    }
+
+    .contacto {
+        flex-direction: column;
+    }
+
+    .contacto input[type="submit"],
+    .contacto input[type="reset"] {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
