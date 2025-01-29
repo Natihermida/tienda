@@ -145,8 +145,23 @@ a:hover {
 }
 aside ul {
     list-style: none;
-    
-
+}
+/* Estilo del footer */
+footer {
+    background-color: #cdc7c7;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+main{
+    display: flex;
+    flex-wrap: nowrap;
+}
+main aside{
+    width: 30%;
+}
+main section{
+    width: 70%;   
 }
 
 /* Respuestas y pantallas pequeñas */
